@@ -1,19 +1,19 @@
 passmenu-otp
 ============
 
-A simple extension of [passmenu][passmenu] friendly to one-time passwords (OTP),
-often used in two-factor authentication (2FA).
+A simple extension of [passmenu][passmenu] friendly to Wayland desktop and 
+supporting pass otp extention often used in two-factor authentication (2FA).
 
 
 ## What is this?
 
-[pass][pass] is a minimalistic password manager, which became known thanks to
+[pass](https://www.passwordstore.org/) is a minimalistic password manager, which became known thanks to
 its incredible versatility and abundance of extension points.
 
 One tool which makes _pass_ extremely convenient for everyday use is
-[passmenu][passmenu] -- a shell script, which utilizes _dmenu_ to offer user
+[passmenu](https://git.zx2c4.com/password-store/tree/contrib/dmenu) -- a shell script, which utilizes _dmenu_ to offer user
 interactive list of available passwords. Having selected a specific password,
-user can copy it to clipboard temporarily, or use _xdotool_ to input it into
+user can copy it to clipboard temporarily, or use any tool to input it into
 focused text area.
 
 Among others, _pass_ can also be used to manage one-time passwords (OTP),
@@ -33,17 +33,16 @@ for OTP's to your friendly neighborhood _passmenu_.
 _passmenu-otp_ works the same way as _passmenu_:
 
   1. Run it (from shell or using keybinding).
-  2. Pick a password in dmenu.
+  2. Pick a password in passmenu.
   3. The password gets copied to your X clipboard for a limited amount of time.
 
-The only difference is if you select `otpauth://` password, the script
-automatically uses it to generate OTP, and copies that to your clipboard instead.
+The **additional feature** is if you select password with content `otpauth://`, the script
+automatically uses *pass otp* to generate an OTP, and **copies that number** to your clipboard instead!
 
 
 ## Security Considerations
 
-Disclaimer: This script runs the contents of your secret through `grep`. If you
-don't trust your environment, it won't be safe to use!
+If you don't trust your device or your environment, don't use this tool.
 
 
 ## Copyright
